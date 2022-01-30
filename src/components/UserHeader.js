@@ -14,11 +14,11 @@ class UserHeader extends React.Component{
         if(!user)
             return null;
 
-        return <div>{user.name}</div>;
+        return <div><h4>{user.name}</h4></div>;
     }
 }
 
-const mapStateToProps = (state, myProps) =>{
+const mapStateToProps = (state, myProps) => {
     return {
         user: state.users.find(user => user.id === myProps.userId)
     };
